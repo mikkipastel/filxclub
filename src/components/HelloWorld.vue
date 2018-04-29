@@ -5,6 +5,8 @@
     <hr>
     <div v-if="movie.Poster !== 'N/A'" v-for="movie in movies" :key="movie.imdbID" class="poster">
       <img :src="movie.Poster" :alt="movie.Title">
+      <br>
+      <router-link :to="{ name: 'Detail', params: { id: movie.imdbID, name: movie.Title } }">Movie Datail</router-link>
     </div>
   </div>
 </template>
