@@ -4,9 +4,9 @@
     <button @click="search">Search</button>
     <hr>
     <div v-if="movie.Poster !== 'N/A'" v-for="movie in movies" :key="movie.imdbID" class="poster">
-      <img :src="movie.Poster" :alt="movie.Title">
-      <br>
-      <router-link :to="{ name: 'Detail', params: { id: movie.imdbID, name: movie.Title } }">Movie Datail</router-link>
+      <router-link :to="{ name: 'Detail', params: { id: movie.imdbID, name: movie.Title } }">
+        <img :src="movie.Poster" :alt="movie.Title">
+      </router-link>
     </div>
   </div>
 </template>
