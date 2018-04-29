@@ -10,7 +10,6 @@
 </template>
 
 <script>
-// import axios from 'axios'
 import {mapActions, mapGetters} from 'vuex'
 
 export default {
@@ -22,8 +21,6 @@ export default {
   },
   async created () {
     this.fetchMovies(this.query)
-    // let movies = await axios.get('http://www.omdbapi.com/?s=avenger&apikey=409a3997')
-    // this.movies = movies.data.Search
   },
   computed: {
     ...mapGetters(['movies'])
@@ -33,10 +30,6 @@ export default {
     search () {
       this.fetchMovies(this.query)
     }
-    // async search () {
-    //   let movies = await axios.get('http://www.omdbapi.com/?s=' + this.query + '&apikey=409a3997')
-    //   this.movies = movies.data.Search
-    // }
   }
 }
 </script>
